@@ -38,6 +38,11 @@ For example, search August and September 2026:
 GET /apis/domain_stats_api/v2/getMatchingDomains?query=*blog*&searchDateId.min=202608&searchDateId.max=202609
 ```
 
+With only `searchDateId.max=202609`, the search includes every available month
+from the beginning of the available history through September 2026, inclusive.
+With only `searchDateId.min=202609`, it includes September 2026 and every
+available month after it through the latest available month in the dataset.
+The latest available month may lag the calendar month.
 Ranges include intermediate years as well as the endpoints. For example,
 `searchDateId.min=201601&searchDateId.max=202601` searches all 121 months from
 January 2016 through January 2026, where data is available. Missing months in a
