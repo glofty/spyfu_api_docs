@@ -15,6 +15,10 @@ with traffic, budget, ranking, and other metric filters.
 
 ## Choose the months to search
 
+**Default:** If both `searchDateId.min` and `searchDateId.max` are omitted, the
+endpoint uses `dateId` when supplied, or the current domain stats index otherwise.
+It does not default to all historical months.
+
 | Parameters | Months searched |
 | --- | --- |
 | Neither date bound nor `dateId` supplied | Current month |

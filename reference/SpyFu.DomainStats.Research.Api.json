@@ -1489,7 +1489,7 @@
           {
             "name": "searchDateId.min",
             "in": "query",
-            "description": "Inclusive first historical month in yyyyMM format. Omit for the earliest available month when searchDateId.max is supplied. Cannot be combined with dateId.",
+            "description": "Inclusive first historical month in yyyyMM format. Omit for the earliest available month when searchDateId.max is supplied. Cannot be combined with dateId. When both bounds are omitted, uses dateId if supplied; otherwise uses the current domain stats index.",
             "schema": {
               "type": "string"
             },
@@ -1498,7 +1498,7 @@
           {
             "name": "searchDateId.max",
             "in": "query",
-            "description": "Inclusive last historical month in yyyyMM format. Omit for the latest available month when searchDateId.min is supplied. Must be greater than or equal to searchDateId.min. Cannot be combined with dateId.",
+            "description": "Inclusive last historical month in yyyyMM format. Omit for the latest available month when searchDateId.min is supplied. Must be greater than or equal to searchDateId.min. Cannot be combined with dateId. When both bounds are omitted, uses dateId if supplied; otherwise uses the current domain stats index.",
             "schema": {
               "type": "string"
             },
